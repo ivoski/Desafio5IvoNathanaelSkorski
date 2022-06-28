@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hype - Tecnologia al instante</title>
+    <link rel="shortcut icon" href="./img/favicon.png">
+    <link rel="stylesheet" href="./Css/style.css">
+</head>
+<body>
+    <div class="contenedor">
+    <nav id="mainNav">
+        <a href="index.html">
+        <img src="./img/logo_Mesa de trabajo 1.png" alt="logo de Hype Tecnologia al instante" class="img__logo--sm">
+        </a>
+        <ul>
+            <li>
+                <a href="./views/productos.html">Productos</a>
+            </li>
+            <li>
+                <a href="./views/promociones.html">Promociones</a>
+            </li>
+            <li>
+                <a href="./views/nosotros.html">Nosotros</a>
+            </li>
+            <li>
+                <a href="./views/Contacto.html">Contacto</a>
+            </li>
+            <li>
+                <a href="./index.html#envio">Envios</a>
+            </li>
+        </ul>
+    </nav>
+    <header id="header">
+        <h1 class="textCenter textBold bgLight">Registro de Compra</h1>
+    </header>
+    <main id="forms">
+        <section class="selectbar">
+                <label for="">Nombre:</label>
+                <input type="text" placeholder="Agustin Ojeda" required>
+                <br>
+                <label for="">Email:  </label>
+                <input type="email" placeholder="agustinojeda@gmail.com" required>
+                <fieldset>
+                    <legend>Info de venta</legend>
+                    <label for="Tablets">Tablets</label>
+                    <input type="checkbox" id="Tablets" value="Tablets">
+                    <br>
+                    <label for="Celulares">Celulares</label>
+                    <input type="checkbox" id="Celulares" value="Celulares">
+                    <br>
+                    <label for="Placa de Video">Placa de video</label>
+                    <input type="checkbox" id="Placa de Video" value="Placa de Video">
+                    <br>    
+                    <label for="Mouse">Mouse</label>
+                    <input type="checkbox" id="Mouse" value="Mouse">
+                    <br>
+                    <label for="Heladera">Heladera</label>
+                    <input type="checkbox" id="Heladera" value="Heladera">
+                    <br>
+                    <label for="Tostadora">Tostadora</label>
+                    <input type="checkbox" id="Tostadora" value="Tostadora">
+                </fieldset>
+                <br>
+                <fieldset>
+                    <form action="" id="envio">
+                    <legend>Info del envio</legend>
+                    <label for="local">Retiro en el local</label>
+                    <input type="radio" id="local" value="local" name="envio">
+                    <br>
+                    <label for="casa">Envio a mi domicilio</label>
+                    <input type="radio" id="casa" value="casa" name="envio">
+                    <br>
+                    <label for="localidad">Provincia</label>
+                    <select name="" id="localidad">
+                        <option value="CABA">Ciudad de Buenos Aires</option>
+                        <option value="BSAS">Provincia de Buenos Aires</option>
+                        <option value="Chaco">Chaco</option>
+                    </select>
+                </fieldset>
+            </form>
+            <br>
+                <fieldset>
+                    <legend>¿Desea recibir nuestro Newsletter?</legend>
+                    <label for="si">Si, me gustaria recibir su Newsletter</label>
+                    <input type="radio" id="si" value="si">
+                </fieldset>
+        </form>
+        </section>
+    </main>
+    <aside id="aside" class="img__aside--sm">
+        <img src="./img/person-hand-filling-una-forma-de-orden-compra-124740129.webp" alt="">
+    </aside>
+    <footer id="footer">
+        <div class="bgLight textCenter">
+        <a href="https://www.facebook.com" target="_blank">
+            <img src="./img/face.png" alt="">
+        </a>
+        <a href="https://www.instagram.com" target="_blank">
+            <img src="./img/ig.png" alt="">
+        </a>
+        <a href="https://twitter.com" target="_blank">
+            <img src="./img/twi.png" alt="">
+        </a>
+        </div>
+    </footer>
+</div>
+</body>
+</html>
