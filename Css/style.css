@@ -51,7 +51,21 @@ nav{
                 font-family: 'Roboto', sans-serif;
                 font-size: 2.3rem;
                 font-weight: 200;
+                /*subrayado animado*/
+                    background-image: linear-gradient(currentColor, currentColor);
+                    background-position: 0% 100%;
+                    background-repeat: no-repeat;
+                    background-size: 0% 2px;
+                    transition: background-size .3s;
             }
+
+/* hover*/
+nav ul li a:hover{
+    color: orangered;
+    font-weight: 600;
+    background-size: 100% 2px;
+}
+
 
 p{
     font-family: 'Roboto', sans-serif;
@@ -375,6 +389,7 @@ background-color: rgb(70, 69, 69);
 /*---------------Animaciones----------*/
 
 
-@keyframes navAnimation{
-    
+.linear-gradient{
+    background: rgb(255,210,48);
+background: linear-gradient(90deg, rgba(255,210,48,1) 27%, rgba(255,67,0,1) 69%, rgba(255,75,0,1) 71%);
 }
