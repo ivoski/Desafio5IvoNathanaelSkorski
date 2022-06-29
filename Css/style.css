@@ -1,0 +1,371 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap');
+
+*{
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+html{
+    font-size: 62.5%;
+}
+
+body{
+    background-image: url(../img/bgimg.jpg);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+}
+
+h1,
+h2,
+h3{
+    color: rgb(70, 69, 69);
+    font-family: 'Roboto', sans-serif;
+    font-size: 3rem;
+    font-weight: 500;
+}
+
+nav{
+    background-color: rgba(70, 69, 69, .5);
+    position: sticky;
+    top:0 ;
+    padding: 4px 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+    nav ul{
+        list-style: none;
+
+    }
+        nav ul li{
+            list-style: none;
+            margin: 0 6px;
+        }
+            nav ul li a{
+                color: orangered;
+                text-decoration: none;
+                font-family: 'Roboto', sans-serif;
+                font-size: 2.3rem;
+                font-weight: 200;
+            }
+
+p{
+    font-family: 'Roboto', sans-serif;
+    font-size: 2rem;
+
+}
+
+/* selectores de clase*/
+
+.textBold{
+    font-weight: 500;
+}
+
+.textLight{
+    font-weight: 200;
+}
+
+.textRegular{
+    font-weight: 300;
+}
+
+.textCenter{
+    text-align: center;
+}
+
+.textLeft{
+    text-align: left;
+}
+
+.textRight{
+    text-align: right;
+}
+
+.bgDark{
+background-color: rgb(70, 69, 69);
+}
+
+.bgLight{
+    background-color: rgb(247, 175, 19);
+}
+
+
+.textCla{
+    color: rgb(247, 175, 19);
+
+}
+
+
+
+/* box model*/
+
+.formas__contacto{
+    width: 95%;
+    height: auto;
+    margin: 50px auto;
+    padding: 20px 5px;
+    border: double 0.5rem navy;
+}
+
+.whats__contacto{
+    text-align: center;
+    background-color: whitesmoke;
+    padding: 5px 0;
+}
+
+.img__principal--fluid{
+    width: 100%;
+
+}
+
+.img__principal--medium{
+    width: 90%;
+    margin-left: 6%;
+}
+
+.img__productos--md{
+    width: 300px;
+}
+
+.img__logo--sm{
+    width: 10%;
+}
+
+.img__aside--sm{
+    width: auto;
+}
+
+
+.btnMed{
+    width: 60%;
+    height: 30px;
+    background-color: rgb(70, 69, 69);
+    color: rgb(247, 175, 19);
+    text-decoration: none;
+    text-align: center;
+    border-radius: 3px;
+    margin-left: 150px;
+    margin-bottom: 10px;
+    font-size: 1.0rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+
+
+
+#productos .galeria{
+    font-family: 'Roboto', sans-serif;
+    text-align: center;
+    display: flex;
+    justify-content: space-around;
+}
+
+    #productos .galeria figure{
+        text-align: center;
+    }
+
+        #productos .galeria figure img{
+            border-top-left-radius: 5px;
+            border-top-right-radius: 5px;
+        }
+            #productos .galeria figure figcaption{
+                font-size: 2.5rem;
+                color:white;
+                background-color: black;
+            }
+
+                #productos .galeria p.price{
+                    color: white;
+                    background-color: black;
+                }
+
+
+#promo .destacado article{
+    background-color: rgb(247, 175, 19);
+    display: flex;
+    margin-top: 5px;
+}
+
+    #promo .destacado article p{
+        font-size: 2rem;
+        line-height: 2.3rem;
+        padding: 50px;
+        margin: 20px auto;
+        color: white;
+    }
+
+.selectbar{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-family:'Roboto', sans-serif ;
+    background-color: rgb(247, 175, 19);
+}
+
+/*------------------GRID----------------------*/
+
+.contenedor { 
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+    grid-template-areas: 
+    "nav" 
+    "header" 
+    "forms"
+    "aside"
+    "footer";
+}
+
+
+#mainNav{
+    grid-area: nav;
+}
+
+#header{
+    grid-area: header;
+}
+
+#forms{
+    grid-area: forms;
+}
+
+#aside{
+    grid-area: aside;
+}
+
+#footer{
+    grid-area: footer;  
+}
+
+
+
+
+/* ----------------- Media Queries -------------------*/
+
+@media (min-width: 370px){
+    .contenedor{
+        grid-template-columns: 1fr;
+        grid-template-rows: auto;
+        grid-template-areas: 
+        "nav" 
+        "header"
+        "forms"
+        "aside"
+        "footer";
+    }
+    #forms{
+        display: flex;
+        flex-direction: column;
+
+    }   
+    #aside{
+        width: 100%;
+    }
+
+        #aside img{
+            width: 100vw;
+        }
+        #mainNav img{
+            width: 38%;
+        }   
+}
+
+
+
+
+
+
+
+
+@media (min-width: 768px){
+    .contenedor{
+        grid-template-columns: 30vw 70vw;
+        grid-template-rows: auto;
+        grid-template-areas: 
+        "nav nav" 
+        "header header"
+        "forms aside"
+        "footer footer";
+    }
+
+    #mainNav{
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+    }
+      #mainNav img{
+        width: 62%;
+      }  
+        #mainNav ul{
+            list-style: none;
+            display: flex;
+            flex-direction: row;
+
+        }
+            #mainNav ul li{
+                list-style: none;
+                margin: 0 6px;
+                }
+                    #mainNav ul li a{
+                        color: orangered;
+                        text-decoration: none;
+                        font-family: 'Roboto', sans-serif;
+                        font-size: 2.3rem;
+                        font-weight: 200;
+                    }
+    
+    #forms{
+        display: flex;
+        flex-direction: column;
+
+    }                
+
+
+
+    #aside{
+        display: flex;
+        width: 70vw;
+    }
+
+        #aside img{
+            width: 100%;
+        }
+}
+
+
+
+@media (min-width: 1024px){
+    .contenedor{
+        grid-template-columns: 30vw 70vw;
+        grid-template-rows: auto;
+        grid-template-areas: 
+        "nav nav" 
+        "header header"
+        "forms aside"
+        "footer footer";
+    }
+    #forms{
+        display: flex;
+        flex-direction: row;
+
+    }   
+    #aside{
+        width: 100%;
+        display: flex;
+    }
+
+        #aside img{
+            width: 100%;
+        }
+        #mainNav img{
+            width: 38%;
+        }   
+}
