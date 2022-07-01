@@ -8,87 +8,148 @@
     <link rel="shortcut icon" href="./img/favicon.png">
     <link rel="stylesheet" href="./Css/style.css">
     <link rel="stylesheet" href="./Css/animate.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
 </head>
 <body>
     <div class="contenedor">
-    <nav id="mainNav">
-        <a href="index.html">
-        <img src="./img/logo_Mesa de trabajo 1.png" alt="logo de Hype Tecnologia al instante" class="img__logo--sm">
-        </a>
-        <ul>
-            <li>
-                <a href="./views/productos.html">Productos</a>
-            </li>
-            <li>
-                <a href="./views/promociones.html">Promociones</a>
-            </li>
-            <li>
-                <a href="./views/nosotros.html">Nosotros</a>
-            </li>
-            <li>
-                <a href="./views/Contacto.html">Contacto</a>
-            </li>
-            <li>
-                <a href="./index.html#envio">Envios</a>
-            </li>
+<!--Inicia Nav-->
+<nav class="navbar navbar-expand-lg bgNav" id="mainNav">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="../index.html">
+        <img src="../img/logo_Mesa de trabajo 1.png" alt="">
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon btnBurger"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="./views/productos.html">Productos</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="./views/promociones.html">Promociones</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="./views/nosotros.html">Nosotros</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="./views/Contacto.html">Contacto</a>
+          </li>                              
         </ul>
-    </nav>
+      </div>
+    </div>
+  </nav>
+<!--Finaliza Nav-->
     <header id="header">
         <h1 class="textCenter textBold linear-gradient">Registro de Compra</h1>
     </header>
     <main id="forms" class="bgLight">
         <section class="selectbar">
-                <label for="">Nombre:</label>
-                <input type="text" placeholder="Agustin Ojeda" required>
-                <br>
-                <label for="">Email:  </label>
-                <input type="email" placeholder="agustinojeda@gmail.com" required>
-                <fieldset>
-                    <legend>Info de venta</legend>
-                    <label for="Tablets">Tablets</label>
-                    <input type="checkbox" id="Tablets" value="Tablets">
-                    <br>
-                    <label for="Celulares">Celulares</label>
-                    <input type="checkbox" id="Celulares" value="Celulares">
-                    <br>
-                    <label for="Placa de Video">Placa de video</label>
-                    <input type="checkbox" id="Placa de Video" value="Placa de Video">
-                    <br>    
-                    <label for="Mouse">Mouse</label>
-                    <input type="checkbox" id="Mouse" value="Mouse">
-                    <br>
-                    <label for="Heladera">Heladera</label>
-                    <input type="checkbox" id="Heladera" value="Heladera">
-                    <br>
-                    <label for="Tostadora">Tostadora</label>
-                    <input type="checkbox" id="Tostadora" value="Tostadora">
-                </fieldset>
-                <br>
-                <fieldset>
-                    <form action="" id="envio">
-                    <legend>Info del envio</legend>
-                    <label for="local">Retiro en el local</label>
-                    <input type="radio" id="local" value="local" name="envio">
-                    <br>
-                    <label for="casa">Envio a mi domicilio</label>
-                    <input type="radio" id="casa" value="casa" name="envio">
-                    <br>
-                    <label for="localidad">Provincia</label>
-                    <select name="" id="localidad">
-                        <option value="CABA">Ciudad de Buenos Aires</option>
-                        <option value="BSAS">Provincia de Buenos Aires</option>
-                        <option value="Chaco">Chaco</option>
-                    </select>
-                </fieldset>
-            </form>
-            <br>
-                <fieldset>
-                    <legend>¿Desea recibir nuestro Newsletter?</legend>
-                    <label for="si">Si, me gustaria recibir su Newsletter</label>
-                    <input type="radio" id="si" value="si">
-                </fieldset>
-        </form>
-        </section>
+<!--Inicia registro-->             
+            <form class="row g-3 needs-validation" novalidate>
+                <div class="col-md-4">
+                  <label for="validationCustom01" class="form-label">Nombres</label>
+                  <input type="text" class="form-control" id="validationCustom01" value="Juan" required>
+                  <div class="valid-feedback">
+                    Looks good!
+                  </div>
+                </div>
+                <div class="col-md-4">
+                  <label for="validationCustom02" class="form-label">Apellidos</label>
+                  <input type="text" class="form-control" id="validationCustom02" value="Perez" required>
+                  <div class="valid-feedback">
+                    Looks good!
+                  </div>
+                </div>
+                <div class="col-md-4">
+                  <label for="validationCustomUsername" class="form-label">Nombre de usuario</label>
+                  <div class="input-group has-validation">
+                    <span class="input-group-text" id="inputGroupPrepend">@</span>
+                    <input type="text" class="form-control" id="validationCustomUsername" aria-describedby="inputGroupPrepend" required>
+                    <div class="invalid-feedback">
+                      Please choose a username.
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-6">
+                  <label for="validationCustom03" class="form-label">Ciudad</label>
+                  <input type="text" class="form-control" id="validationCustom03" required>
+                  <div class="invalid-feedback">
+                    Please provide a valid city.
+                  </div>
+                </div>
+                <div class="col-md-3">
+                  <label for="validationCustom04" class="form-label">Provincia</label>
+                  <select class="form-select" id="validationCustom04" required>
+                    <option selected disabled value="">Elija...</option>
+                    <option>Formosa</option>
+                    <option>Chaco</option>
+                    <option>Corrientes</option>
+                    <option>Provincia de Buenos Aires</option>
+                    <option>Cordoba</option>
+                    <option>Mendoza</option>
+                    <option>Tucuman</option>
+                    <option>Neuquen</option>
+                  </select>
+                  <div class="invalid-feedback">
+                    Please select a valid state.
+                  </div>
+                </div>
+                <div class="col-md-3">
+                  <label for="validationCustom05" class="form-label">Codigo Postal</label>
+                  <input type="text" class="form-control" id="validationCustom05" required>
+                  <div class="invalid-feedback">
+                    Please provide a valid zip.
+                  </div>
+                </div>
+                <div class="col-12">
+                  <div class="form-check">
+                    <input class="form-check-input" type="checkbox" value="" id="invalidCheck" required>
+                    <label class="form-check-label" for="invalidCheck">
+                        <p class="textLight">¿Acepta los terminos y condiciones?</p>
+                    </label>
+                    <div class="invalid-feedback">
+                      You must agree before submitting.
+                    </div>
+                  </div>
+                </div>
+                <div class="col-12">
+                  <button class="btn btn-primary" type="submit"><p class="textLight">Enviar Registro</p></button>
+                </div>
+              </form>
+<!--Finaliza registro-->
+<!--Inicia CheckBox de compra-->              
+<div class="form-check form-switch">
+    <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckDefault">
+    <label class="form-check-label" for="flexSwitchCheckDefault"><p class="textRegular  ">Tablet</p></label>
+  </div>
+  <div class="form-check form-switch">
+    <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckDefault">
+    <label class="form-check-label" for="flexSwitchCheckDefault"><p class="textRegular">Celular</p></label>
+  </div>
+  <div class="form-check form-switch">
+    <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckDefault">
+    <label class="form-check-label" for="flexSwitchCheckDefault"><p class="textRegular">Periferico</p></label>
+  </div>
+  <div class="form-check form-switch">
+    <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckDefault">
+    <label class="form-check-label" for="flexSwitchCheckDefault"><p class="textRegular">Heladera</p></label>
+  </div>
+<!--Finaliza CheckBox de compra-->
+<!--Inicia checkbox de Newsletter-->              
+<p class="textRegular">¿Desea recibir nuestro Newsletter?</p>
+<div class="form-check">
+    <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
+    <label class="form-check-label" for="defaultCheck1">
+      <p class="textLight">Si, deseo recibir su Newsletter</p>
+    </label>
+  </div>
+  <div class="form-check">
+    <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
+    <label class="form-check-label" for="defaultCheck1">
+      <p class="textLight">No, no deseo recibir su Newsletter</p>
+    </label>
+  </div>
     </main>
     <aside id="aside" class="img__aside--sm">
         <img src="./img/person-hand-filling-una-forma-de-orden-compra-124740129.webp" alt="">
@@ -111,5 +172,6 @@
     <script>
         new WOW().init();
     </script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
 </body>
 </html>

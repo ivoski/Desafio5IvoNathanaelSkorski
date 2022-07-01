@@ -69,8 +69,7 @@ nav ul li a:hover{
 
 p{
     font-family: 'Roboto', sans-serif;
-    font-size: 2rem;
-
+    font-size: 1.5rem;
 }
 
 /* selectores de clase*/
@@ -386,11 +385,20 @@ background-color: rgb(70, 69, 69);
         #aside img{
             width: 100%;
         }
-        #mainNav img{
-            width: 38%;
-        }   
+        #mainNav{
+            display: flex;
+            flex-direction: row;
+        }
+          #mainNav img{
+            width: 200px;
+          }  
+            #mainNav ul{
+                list-style: none;
+                display: flex;
+                flex-direction: row;
+                
 }
-
+}
 
 
 /*---------------Animaciones----------*/
@@ -398,5 +406,5 @@ background-color: rgb(70, 69, 69);
 
 .linear-gradient{
     background: rgb(255,210,48);
-background: linear-gradient(90deg, rgba(255,210,48,1) 27%, rgba(255,67,0,1) 69%, rgba(255,75,0,1) 71%);
+    background: linear-gradient(90deg, rgba(255,210,48,1) 27%, rgba(255,67,0,1) 69%, rgba(255,75,0,1) 71%);
 }
