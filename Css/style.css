@@ -107,6 +107,9 @@ background-color: rgb(70, 69, 69);
     background-color: rgb(247, 175, 19);
 }
 
+.bgNav{
+    background-color: rgba(70, 69, 69, .5);
+}
 
 .textCla{
     color: rgb(247, 175, 19);
@@ -288,7 +291,7 @@ background-color: rgb(70, 69, 69);
             width: 100vw;
         }
         #mainNav img{
-            width: 38%;
+            width: 100px;
         }   
 }
 
@@ -312,16 +315,16 @@ background-color: rgb(70, 69, 69);
 
     #mainNav{
         display: flex;
-        flex-direction: row;
+        flex-direction: column;
         justify-content: center;
     }
       #mainNav img{
-        width: 62%;
+        width: 200px;
       }  
         #mainNav ul{
             list-style: none;
             display: flex;
-            flex-direction: row;
+            flex-direction: column;
 
         }
             #mainNav ul li{
